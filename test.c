@@ -1,4 +1,4 @@
-#define _GNU_SOURCE
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
@@ -14,15 +14,14 @@
 #include <math.h>
 #include <time.h>
 
-#define PAGE_SIZE 4096
+#define PAGE_SIZE 2048
 
-#define FREQ 3.9
+#define FREQ 4.2
 
 static int test_hugepage = 0;
 static int random_list = 0;
 
-static void die(const char *fmt, ...)
-{
+static void die(const char *fmt, ...) {
 	va_list argp;
 	va_start(argp, fmt);
 	vfprintf(stderr, fmt, argp);
