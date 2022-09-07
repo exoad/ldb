@@ -1,2 +1,0 @@
-# ldb
-test ldb
